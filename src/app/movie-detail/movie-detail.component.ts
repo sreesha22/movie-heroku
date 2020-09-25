@@ -12,7 +12,7 @@ import { MovieDetail, Movie } from "../movie.model";
   styleUrls: ["./movie-detail.component.css"]
 })
 export class MovieDetailComponent implements OnInit {
-  movieDetils$: Observable<MovieDetail>;
+  movieDetils$: Observable<MovieDetail>
 
   constructor(
     private readonly route: ActivatedRoute,
