@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="form-group">
+    <label for="query" style="font-size: large;">Search for a Movie</label>
+    <input 
+      id="query" 
+      type="text" 
+      class="form-control" 
+      [(ngModel)]="query"
+      (keyup.enter)="getSearchResults()">
+  </div>
+  <button type="button" (click)="getSearchResults()" class="form-control btn btn-success">Search</button>
+  <hr>
+  <div class="row">
+    <app-movie 
+      *ngFor="let movie of movies$ | async"
+      [movie]="movie"
+      class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-xs-12">
+    </app-movie>
+  </div>
+</div>

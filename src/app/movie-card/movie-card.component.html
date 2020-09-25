@@ -1,0 +1,21 @@
+<div class="card">
+	<img 
+    [src]="movie.Poster | defaultImage" 
+    class="card-img-top" 
+    [alt]="movie.Title">
+	<div class="card-body">
+		<h5 class="card-title">
+      {{ movie.Title | ellipsify: 25 }}
+			<span class="badge badge-primary">{{ movie.Type | uppercase }}</span>
+    </h5>
+		<p class="card-text">
+      {{ movie.Title }} is a {{ movie.Type }} that was released in {{ movie.Year }}
+    </p>
+		<a 
+      routerLink="/movie-detail" 
+      [queryParams]="{ movieId: movie.imdbID }" 
+      class="btn btn-primary">
+			Learn More
+		</a>
+	</div>
+</div>
