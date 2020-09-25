@@ -13,7 +13,7 @@ import { MovieDetail, Movie } from "../movie.model";
 })
 export class MovieDetailComponent implements OnInit {
   movieDetils$: Observable<MovieDetail>
-
+  movieDetil$: Observable<unknown>
   constructor(
     private readonly route: ActivatedRoute,
     private readonly movieService: MovieService
